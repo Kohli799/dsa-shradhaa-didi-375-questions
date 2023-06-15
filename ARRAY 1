@@ -1,0 +1,38 @@
+class Solution
+{ 
+     public static int findSum(int arr[],int n) 
+        //code here
+        { 
+            int min=getmin(arr,n);
+            int max=getmax(arr,n);
+            return min+max;
+        }
+    
+        
+       static int getmin(int arr[],int n)
+        {
+            int res= arr[0];
+            for(int i=0;i<n;i++)
+                res=Math.min(res,arr[i]);
+                return res;
+            }
+          static int getmax(int arr[],int n)
+        {
+            int res= arr[0];
+            for(int i=0;i<n;i++)
+                res=Math.max(res,arr[i]);
+                return res;
+            }
+        
+       
+       
+       
+        void main()
+        {
+            int arr[]={-2,1,-4,5,3};
+            int n= arr.length;
+            
+            
+        System.out.println(findSum(arr,n));
+    }
+}
